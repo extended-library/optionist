@@ -5,6 +5,8 @@ os:
   - windows
   - osx
 
+sudo: false
+
 node_js:
   - node
   - lts/*
