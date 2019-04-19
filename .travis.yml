@@ -19,15 +19,16 @@ cache:
 
 jobs:
   include:
-    - stage: test:src
-      script:
-        - npm run test:src
-
     - stage: build
       script:
         - npm run build
 
-    - stage: test:dist
+    - stage: test
+      name: "test:src"
+      script:
+        - npm run test:src
+
+      name: "test:dist"
       script:
         - npm run test:dist
 
