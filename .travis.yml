@@ -1,0 +1,40 @@
+language: node_js
+
+node_js:
+  - node
+  - lts/*
+  - 10
+  - 9
+  - 8
+  - 7
+  - 6
+
+notifications:
+  email: false
+
+cache:
+  npm: true
+  directories:
+    - ./dist
+
+jobs:
+  include:
+    - stage: test:src
+      script:
+        - npm run test:src
+
+    - stage: build
+      script:
+        - npm run build
+
+    - stage: test:dist
+      script:
+        - npm run test:dist
+
+    # - stage: release
+    #   script: skip
+    #   deploy:
+    #     skip_cleanup: true
+    #     provider: script
+    #     script:
+    #       - npx semantic-release
