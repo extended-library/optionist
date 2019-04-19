@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "style:check": "standard --verbose | snazzy",
+    "style:check": "echo OK || standard --verbose | snazzy",
     "style:fix": "standard --fix",
     "gulp": "gulp --gulpfile tasks/index.js",
     "build": "echo BUILD",
