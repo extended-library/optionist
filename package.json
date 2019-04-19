@@ -8,17 +8,20 @@
     "style:fix": "standard --fix",
     "gulp": "gulp --gulpfile tasks/index.js",
     "build": "echo BUILD",
-    "test:src": "mocha",
-    "test:dist": "mocha",
+    "test:src": "npm run style:check && cross-env MODULE=src mocha",
+    "test:dist": "npm run style:check && cross-env MODULE=dist mocha",
     "test": "npm run test:src && npm run test:dist"
   },
   "keywords": [],
   "author": "Richard King <richrdkng@gmail.com> (www.richrdkng.com)",
   "license": "ISC",
   "standard": {
-    "env": [ "mocha" ]
+    "env": [
+      "mocha"
+    ]
   },
   "devDependencies": {
+    "cross-env": "^5.2.0",
     "gulp": "^4.0.0",
     "mocha": "^6.1.4",
     "snazzy": "^8.0.0",
