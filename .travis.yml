@@ -17,18 +17,18 @@ cache:
   directories:
     - ./dist
 
+stages:
+  - build
+  - test
+  # - release
+
 jobs:
   include:
     - stage: build
       script: npm run build
 
     - stage: test
-      name: "test:src"
-      script: npm run test:src
-
-    - stage: test
-      name: "test:dist"
-      script: npm run test:dist
+      script: npm run test
 
     # - stage: release
     #   script: skip
