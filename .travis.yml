@@ -20,26 +20,19 @@ notifications:
 
 cache:
   npm: true
-  directories:
-    - ./dist
-
-stages:
-  - build
-  - test
-  # - release
 
 jobs:
   include:
-    - stage: build
-      script: npm run build
-
     - stage: test
       script: npm run test
 
-    # - stage: release
-    #   script: skip
-    #   deploy:
-    #     skip_cleanup: true
-    #     provider: script
-    #     script:
-    #       - npx semantic-release
+    - stage: release
+      script: skip
+      deploy:
+        skip_cleanup: true
+        provider: script
+        script:
+          - rm -rf index.js test && mv src/* . && rm -rf src
+          - ls -lah1
+          - npm pack --dry-run
+          # - npx semantic-release
