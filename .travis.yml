@@ -1,19 +1,14 @@
 language: node_js
 
-os:
-  - linux
-  - windows
-  - osx
-
-sudo: false
-
 node_js:
   - node
-  - lts/*
-  - 10
-  - 9
-  - 8
-  - 7
+
+os:
+  - linux
+  - osx
+  - windows
+
+sudo: false
 
 notifications:
   email: false
@@ -27,12 +22,13 @@ jobs:
       script: npm run test
 
     - stage: release
-      script: skip
+      script:
+        - rm -rf index.js test && mv src/* . && rm -rf src
+        - ls -lah1
+        - npm pack --dry-run
+
       deploy:
         skip_cleanup: true
         provider: script
         script:
-          - rm -rf index.js test && mv src/* . && rm -rf src
-          - ls -lah1
-          - npm pack --dry-run
           # - npx semantic-release
