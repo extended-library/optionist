@@ -1,13 +1,18 @@
 {
   "name": "optionry",
   "version": "0.0.0-development",
-  "description": "Options weaponry. A powerful option parser utility.",
-  "main": "index.js",
-  "scripts": {
-    "style:check": "standard --verbose | snazzy",
-    "style:fix": "standard --fix",
-    "test": "npm run style:check && mocha test/cases/*.test.js test/cases/**/*.test.js"
+  "description": "A powerful option parser utility, an Options Weaponry.",
+  "author": "Richard King <richrdkng@gmail.com> (www.richrdkng.com)",
+  "license": "ISC",
+  "homepage": "https://github.com/nodewell/optionry#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nodewell/optionry.git"
   },
+  "bugs": {
+    "url": "https://github.com/nodewell/optionry/issues"
+  },
+  "main": "index.js",
   "keywords": [
     "option",
     "options",
@@ -19,19 +24,14 @@
     "util",
     "tool"
   ],
-  "author": "Richard King <richrdkng@gmail.com> (www.richrdkng.com)",
-  "license": "ISC",
   "engines": {
     "node": ">=7.0.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/nodewell/optionry.git"
+  "scripts": {
+    "style:check": "standard --verbose | snazzy",
+    "style:fix": "standard --fix",
+    "test": "npm run style:check && mocha test/cases/*.test.js test/cases/**/*.test.js"
   },
-  "bugs": {
-    "url": "https://github.com/nodewell/optionry/issues"
-  },
-  "homepage": "https://github.com/nodewell/optionry#readme",
   "standard": {
     "env": [
       "mocha"
