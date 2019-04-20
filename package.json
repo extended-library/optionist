@@ -1,7 +1,7 @@
 {
   "name": "optionry",
   "version": "0.0.0-development",
-  "description": "A powerful option parser utility, an Options Weaponry.",
+  "description": "A powerful option parser utility, a.k.a. Options Weaponry.",
   "author": "Richard King <richrdkng@gmail.com> (www.richrdkng.com)",
   "license": "ISC",
   "homepage": "https://github.com/nodewell/optionry#readme",

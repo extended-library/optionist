@@ -11,7 +11,7 @@
 [![Release Workflow][badge-release]][url-release]
 [![PRs Welcome][badge-contrib]][url-contrib-doc]
 
-A powerful **option parser utility**, an ***Options Weaponry***.
+A powerful **option parser utility**, a.k.a. ***Options Weaponry***.
 
 ## Installation
 
