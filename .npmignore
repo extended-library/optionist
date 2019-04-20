@@ -1,0 +1,16 @@
+# GitHub templates
+.github
+
+# source directory
+/src
+
+# build-related files
+.gitattributes
+.nvmrc
+.releaserc
+.travis.yml
+
+# editor settings
+.idea
+.vscode
+.editorconfig
