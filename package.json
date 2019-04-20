@@ -1,6 +1,6 @@
 {
   "name": "optionry",
-  "version": "0.0.0",
+  "version": "0.0.0-development",
   "description": "Options weaponry. A powerful option parser utility.",
   "main": "index.js",
   "scripts": {
@@ -38,7 +38,16 @@
     ]
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^3.0.2",
+    "@semantic-release/commit-analyzer": "^6.1.0",
+    "@semantic-release/git": "^7.0.8",
+    "@semantic-release/github": "^5.2.10",
+    "@semantic-release/npm": "^5.1.4",
+    "@semantic-release/release-notes-generator": "^7.1.4",
+    "commitizen": "^3.1.1",
+    "cz-conventional-changelog": "^2.1.0",
     "mocha": "^6.1.4",
+    "semantic-release": "^15.13.3",
     "snazzy": "^8.0.0",
     "standard": "^12.0.1"
   }

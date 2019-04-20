@@ -5,8 +5,6 @@
     "@semantic-release/changelog",
     "@semantic-release/github",
     "@semantic-release/git",
-    ["@semantic-release/exec", {
-      "successCmd": "npm run deploy -- --${nextRelease.version}"
-    }]
+    "@semantic-release/npm"
   ]
 }

@@ -30,14 +30,14 @@ jobs:
     - stage: release
       script:
         # restructure the package, then list the files that will be released
-        - rm index.js          # remove files in project root
-        - rm -rf test          # remove directories
-        - mv src/* .           # move code to the project root
-        - rm -rf src           # remove previous code directory
-        - npm pack --dry-run   # list the files
+        - rm index.js        # remove files in project root
+        - rm -rf test        # remove directories
+        - mv src/* .         # move code to the project root
+        - rm -rf src         # remove previous code directory
+        - npm pack --dry-run # list the files
 
       deploy:
         skip_cleanup: true
         provider: script
         script:
-          # - npx semantic-release
+          - npx semantic-release
