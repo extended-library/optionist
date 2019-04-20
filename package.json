@@ -16,6 +16,9 @@
   "keywords": [],
   "author": "Richard King <richrdkng@gmail.com> (www.richrdkng.com)",
   "license": "ISC",
+  "engines" : {
+    "node" : ">=7.0.0"
+  },
   "standard": {
     "env": [
       "mocha"
