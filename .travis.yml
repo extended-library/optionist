@@ -27,6 +27,10 @@ jobs:
       script:
         - npm run test
 
+      after_success:
+        # submit coverage report
+        - npx nyc report --reporter=text-lcov | npx coveralls
+
     - stage: release
       script:
         # restructure the package, then list the files that will be released
