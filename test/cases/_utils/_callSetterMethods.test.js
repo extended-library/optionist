@@ -4,7 +4,7 @@ const assert = require('assert')
 const AssignTestClass = require('../../helpers/AssignTestClass')
 const _callSetterMethods = require('../../../src/_utils/_callSetterMethods')
 
-describe('_utils/_callSetterMethods', () => {
+describe('optionry/_utils/_callSetterMethods', () => {
   it('should call only the setter methods (e.g.: setName("name"), setText("text"), etc.)', () => {
     const methods = []
     const c = new AssignTestClass(

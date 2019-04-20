@@ -3,7 +3,7 @@
 const assert = require('assert')
 const method = require('../../../src/assign/method')
 
-describe('optionary/assign/method', () => {
+describe('optionry/assign/method', () => {
   it('should throw an error, when called improperly', () => {
     let message
 

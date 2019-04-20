@@ -3,7 +3,7 @@
 const assert = require('assert')
 const underscore = require('../../../src/assign/underscore')
 
-describe('optionary/assign/underscore', () => {
+describe('optionry/assign/underscore', () => {
   it('should throw an error, when called improperly', () => {
     let message
 

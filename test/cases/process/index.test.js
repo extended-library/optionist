@@ -4,7 +4,7 @@ const assert = require('assert')
 const process = require('../../../src/process')
 const get = require('../../../src/process/get')
 
-describe('optionary/process', () => {
+describe('optionry/process', () => {
   it('should return empty object of options, when called without arguments', () => {
     const options = process()
 

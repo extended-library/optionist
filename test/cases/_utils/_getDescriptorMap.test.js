@@ -4,7 +4,7 @@ const assert = require('assert')
 const DescriptorTestClass = require('../../helpers/DescriptorTestClass')
 const _getDescriptorMap = require('../../../src/_utils/_getDescriptorMap')
 
-describe('_utils/_getDescriptorMap', () => {
+describe('optionry/_utils/_getDescriptorMap', () => {
   it('should return a map with all the class members', () => {
     const c = new DescriptorTestClass()
 
