@@ -62,8 +62,8 @@ You may get feedback about what should be fixed/changed in your modified code.
 
   <!--- References ============================================================================ -->
 
-  [url-dev-doc]:     https://github.com/nodewell/brand/blob/master/.github/DEVELOPMENT.md
-  [url-issues]:      https://github.com/nodewell/brand/issues
+  [url-dev-doc]:     https://github.com/nodewell/optionry/blob/master/.github/DEVELOPMENT.md
+  [url-issues]:      https://github.com/nodewell/optionry/issues
   [url-style]:       https://standardjs.com
   [arr-contrib-url]: https://docs.npmjs.com/files/package.json#people-fields-author-contributors
   [pull-req-url]:    https://blog.github.com/2013-05-14-closing-issues-via-pull-requests
