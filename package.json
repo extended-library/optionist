@@ -1,7 +1,7 @@
 {
-  "name": "optionary",
+  "name": "optionry",
   "version": "0.0.0",
-  "description": "",
+  "description": "Options weaponry. A powerful option parser utility.",
   "main": "index.js",
   "scripts": {
     "style:check": "standard --verbose | snazzy",
@@ -13,12 +13,30 @@
     "test:dist": "npm run style:check && cross-env MODULE=dist npm run mocha",
     "test": "npm run test:src && npm run test:dist"
   },
-  "keywords": [],
+  "keywords": [
+    "option",
+    "options",
+    "option-parser",
+    "options-parser",
+    "options weaponry",
+    "weaponry",
+    "utility",
+    "util",
+    "tool"
+  ],
   "author": "Richard King <richrdkng@gmail.com> (www.richrdkng.com)",
   "license": "ISC",
-  "engines" : {
-    "node" : ">=7.0.0"
+  "engines": {
+    "node": ">=7.0.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nodewell/optionry.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nodewell/optionry/issues"
+  },
+  "homepage": "https://github.com/nodewell/optionry#readme",
   "standard": {
     "env": [
       "mocha"
