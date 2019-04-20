@@ -1,4 +1,4 @@
-# optionary
+# optionry
 
 ## License
 
