@@ -30,8 +30,11 @@ jobs:
     - stage: release
       script:
         # restructure the package, then list the files that will be released
-        - rm -rf index.js test && mv src/* . && rm -rf src
-        - npm pack --dry-run
+        - rm index.js          # remove files in project root
+        - rm -rf test          # remove directories
+        - mv src/* .           # move code to the project root
+        - rm -rf src           # remove previous code directory
+        - npm pack --dry-run   # list the files
 
       deploy:
         skip_cleanup: true
