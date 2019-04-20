@@ -2,6 +2,11 @@ language: node_js
 
 node_js:
   - node
+  # - lts/*
+  # - 10
+  # - 9
+  # - 8
+  # - 7
 
 os:
   - linux
@@ -24,10 +29,8 @@ jobs:
 
     - stage: release
       script:
-        # restructure the package
+        # restructure the package, then list the files that will be released
         - rm -rf index.js test && mv src/* . && rm -rf src
-        # list and show the files that will be released
-        - ls -lah1
         - npm pack --dry-run
 
       deploy:
