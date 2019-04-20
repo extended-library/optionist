@@ -16,8 +16,15 @@
   "keywords": [
     "option",
     "options",
+    "opt",
+    "opts",
+    "parser",
+    "parsing",
     "option-parser",
     "options-parser",
+    "options weaponry",
+    "option-parsing",
+    "options-parsing",
     "options weaponry",
     "weaponry",
     "utility",
@@ -30,12 +37,18 @@
   "scripts": {
     "style:check": "standard --verbose | snazzy",
     "style:fix": "standard --fix",
-    "test": "npm run style:check && mocha test/cases/*.test.js test/cases/**/*.test.js"
+    "test": "npm run style:check && mocha test/cases/*.test.js test/cases/**/*.test.js",
+    "commit": "git-cz"
   },
   "standard": {
     "env": [
       "mocha"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
   "devDependencies": {
     "@semantic-release/changelog": "^3.0.2",
