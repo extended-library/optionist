@@ -36,7 +36,7 @@
   "scripts": {
     "style:check": "standard --verbose | snazzy",
     "style:fix": "standard --fix",
-    "test": "npm run style:check && nyc mocha test/cases/*.test.js test/cases/**/*.test.js",
+    "test": "npm run style:check && nyc mocha",
     "commit": "npx git-cz"
   },
   "standard": {
