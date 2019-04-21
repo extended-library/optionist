@@ -15,10 +15,10 @@ const merge = require('../_utils/_merge')
  *
  * @returns {Object} The new recursive Proxy with the processed options.
  */
-module.exports = (options = null, defaultsOptions = null) => {
+module.exports = (options = null, defaultOptions = null) => {
   // create a recursive Proxy with Symbol-based keys to store data
   const proxy = new Proxy({
-    [KEYS.OPTIONS]: merge(options, defaultsOptions),
+    [KEYS.OPTIONS]: merge(options, defaultOptions),
     [KEYS.KEY]: []
   }, {
     get (target, property) {
