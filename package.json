@@ -36,7 +36,9 @@
   "scripts": {
     "style:check": "standard --verbose | snazzy",
     "style:fix": "standard --fix",
+    "gulp": "gulp --gulpfile tasks/index.js",
     "test": "npm run style:check && nyc mocha \"test/**/*.test.js\"",
+    "docs": "npm run gulp -- docs",
     "commit": "npx git-cz"
   },
   "standard": {
@@ -54,6 +56,10 @@
     "commitizen": "^3.1.1",
     "coveralls": "^3.0.3",
     "cz-conventional-changelog": "^2.1.0",
+    "del": "^4.1.0",
+    "fs-extra": "^7.0.1",
+    "gulp": "^4.0.0",
+    "jsdoc-to-markdown": "^4.0.1",
     "mocha": "^6.1.4",
     "nyc": "^14.0.0",
     "semantic-release": "^15.13.3",
