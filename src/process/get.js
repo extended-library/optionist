@@ -1,27 +1,40 @@
 'use strict'
 
+/**
+ * @module optionry/process/get
+ */
+
 const KEYS = require('../_utils/_KEYS')
 const getValue = require('../_utils/_getValue')
 
-function resetKey (option) {
-  option[KEYS.KEY] = []
+/**
+ * Resets the recursive Proxy's key store.
+ *
+ * @private
+ * @param {Object} proxy - The recursive Proxy to reset.
+ */
+function resetKey (proxy) {
+  proxy[KEYS.KEY] = []
 }
 
 /**
- * Returns the specific option of the processed options.
+ * Returns the specific option of the processed options from a recursive Proxy.
  *
- * @param {Object} [option]        - The options to process.
- * @param {Object} [defaultOption] - The default options to process.
+ * @param {Object} [option]        - The specific option to return.
+ * @param {Object} [defaultOption] - The default option to return in case the specific option is not present.
  *
  * @returns {*} The specific option.
+ *
+ * @throws {TypeError} In case the option was not previously processed with ".process()".
  */
-module.exports = function (option = null, defaultOption = null) {
+module.exports = (option = null, defaultOption = null) => {
   if (!option || typeof option !== 'object') {
     return defaultOption
   }
 
+  // check for the Proxy
   if (!option[KEYS.OPTIONS] || !option[KEYS.KEY]) {
-    throw new Error('Object has to be processed using .process() before using .get() on the object!')
+    throw new TypeError('Object has to be processed using .process() before using .get() on the object!')
   }
 
   const options = option[KEYS.OPTIONS]
