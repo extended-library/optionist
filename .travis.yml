@@ -35,7 +35,7 @@ jobs:
       script:
         # restructure the package, then list the files that will be released
         - rm index.js        # remove files in project root
-        - rm -rf test        # remove directories
+        - rm -rf test tasks  # remove directories
         - mv src/* .         # move code to the project root
         - rm -rf src         # remove previous code directory
         - npm pack --dry-run # list the files
