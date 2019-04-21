@@ -21,6 +21,15 @@ module.exports = (options = null, defaultOptions = null) => {
     [KEYS.OPTIONS]: merge(options, defaultOptions),
     [KEYS.KEY]: []
   }, {
+    /**
+     * A trap for getting property values.
+     *
+     * @private
+     * @param {Object} target   - The target, which was used, when the Proxy was created.
+     * @param {string} property - The actual property, that is used, when accessing the Proxy.
+     *
+     * @returns {Object} - The Proxy, thus creating the recursive functionality.
+     */
     get (target, property) {
       // handle access via the Symbol objects from KEYS
       switch (property) {
@@ -35,6 +44,11 @@ module.exports = (options = null, defaultOptions = null) => {
       // return the Proxy instance to provide the recursive functionality
       return proxy
     },
+    /**
+     * A trap for Object.getOwnPropertyNames and Object.getOwnPropertySymbols.
+     *
+     * @private
+     */
     ownKeys () {
       // hide internal data
       return []
