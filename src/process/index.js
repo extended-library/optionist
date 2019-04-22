@@ -38,7 +38,7 @@ module.exports = (options = null, defaultOptions = null) => {
           return target[property]
       }
 
-      // store the key (e.g.: "option.key.within.deep")
+      // store the partial keys (e.g.: for option "a.b.c", it will store them like "a", "b", then "c" separately)
       target[KEYS.KEY].push(property)
 
       // return the Proxy instance to provide the recursive functionality
