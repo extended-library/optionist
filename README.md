@@ -17,8 +17,8 @@
 A powerful **options object parser utility**, a.k.a. ***Options Specialist***.
 
 Follow the project on [Twitter][url-twitter] for updates and
-check out the [contribution][url-section-contrib] section 
-if you're looking to contribute *(issues, PRs, ideas, etc.)*.
+check out the [contribution][url-section-contrib] section if you're looking to contribute
+*(issues, PRs, improve examples & docs, fix typos, discuss ideas, etc.)*.
 
 ---
 
