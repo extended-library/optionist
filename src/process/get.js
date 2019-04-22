@@ -26,6 +26,34 @@ function resetKey (proxy) {
  * @returns {*} The specific option.
  *
  * @throws {TypeError} In case the option was not previously processed with ".process()".
+ *
+ * @example <caption>get the processed options - for more examples, check: **optionist/process**</caption>
+ * const process = require('optionist/process')
+ * const get = require('optionist/process/get')
+ *
+ * class MyClass {
+ *   constructor (options = null) {
+ *     options = process(options, DEFAULTS)
+ *
+ *     // handle complex, deeply nested Objects without 'Uncaught ReferenceError'
+ *     // and constant "key within object" checking
+ *     // note: key existence checking isn't needed (e.g.:
+ *     // if (options.settings && 'data' in options.settings && ...) { ... })
+ *     this._value = get(options.settings.deeply.nested.data.value)
+ *     // note: per-option default option is also possible, when the specific option doesn't exist
+ *     this._flag = get(options.settings.burried.deeply.yet.doesnt.exist.flag, true)
+ *
+ *     // also possible in conditions...
+ *     if (get(options.deeply.nested.settings.value) > 0) {
+ *       // handle value
+ *     }
+ *
+ *     // ...with per-option default option, when the specific option doesn't exist
+ *     if (!get(options.some.other.deeply.nested.non.existent.flag, false)) {
+ *       // handle flag
+ *     }
+ *   }
+ * }
  */
 module.exports = (option = null, defaultOption = null) => {
   if (!option || typeof option !== 'object') {

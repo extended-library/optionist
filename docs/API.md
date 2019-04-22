@@ -11,9 +11,9 @@
 <dd></dd>
 <dt><a href="#module_optionist/assign/underscore">optionist/assign/underscore</a></dt>
 <dd></dd>
-<dt><a href="#module_optionist/process/get">optionist/process/get</a></dt>
-<dd></dd>
 <dt><a href="#module_optionist/process">optionist/process</a></dt>
+<dd></dd>
+<dt><a href="#module_optionist/process/get">optionist/process/get</a></dt>
 <dd></dd>
 </dl>
 
@@ -24,8 +24,8 @@
 
 ### module.exports([options], [defaultOptions]) ⇒ <code>Object</code> ⏏
 Copies and merges options and default options into a new object.
-If no options and defaultOptions were passed, or they are both null, or falsy,
-an empty Object will be returned (e.g.: {}).
+If no `options` and `defaultOptions` were passed, or they are both `null`, or falsy,
+an empty Object will be returned (e.g.: `{}`).
 
 **Kind**: Exported function  
 **Returns**: <code>Object</code> - The new object with the merged options.  
@@ -162,11 +162,12 @@ function myFunction (options = null) {
   options = process(options, DEFAULTS)
 
   // handle complex, deeply nested Objects without 'Uncaught ReferenceError'
-  // and constant "key within object" checking, e.g.:
-  // note: key existence checking isn't needed (e.g.: if (options.settings && 'data' in options.settings && ...))
+  // and constant "key within object" checking
+  // note: key existence checking isn't needed (e.g.:
+  // if (options.settings && 'data' in options.settings && ...) { ... })
   this._value = get(options.settings.deeply.nested.data.value)
   // note: per-option default option is also possible, when the specific option doesn't exist
-  this._flag = get(options.settings.burried.deeply.flag, true)
+  this._flag = get(options.settings.burried.deeply.yet.doesnt.exist.flag, true)
 
   // also possible in conditions...
   if (get(options.deeply.nested.settings.value) > 0) {
@@ -174,7 +175,7 @@ function myFunction (options = null) {
   }
 
   // ...with per-option default option, when the specific option doesn't exist
-  if (get(options.some.other.deeply.nested.flag, false)) {
+  if (get(options.some.other.deeply.nested.non.existent.flag, false)) {
     // handle flag
   }
 }
@@ -281,6 +282,88 @@ Processes the given options and assigns them by setting the underscored properti
     </tr>  </tbody>
 </table>
 
+<a name="module_optionist/process"></a>
+
+## optionist/process
+<a name="exp_module_optionist/process--module.exports"></a>
+
+### module.exports([options], [defaultOptions]) ⇒ <code>Object</code> ⏏
+Processes the options and default options and merges them into a new recursive Proxy.
+This recursive Proxy provides a convenient and short way to handle complex, deeply nested options
+without getting `Uncaught ReferenceError` and constantly checking whether keys exist in objects
+(e.g.: `if (options.settings && 'data' in options.settings && ...) { ... }`).
+
+**Kind**: Exported function  
+**Returns**: <code>Object</code> - The new recursive Proxy with the processed options.  
+<table>
+  <thead>
+    <tr>
+      <th>Param</th><th>Type</th><th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>[options]</td><td><code>Object</code></td><td><p>The options to use to merge into a new recursive Proxy.</p>
+</td>
+    </tr><tr>
+    <td>[defaultOptions]</td><td><code>Object</code></td><td><p>The default options to use to merge into a new recursive Proxy.</p>
+</td>
+    </tr>  </tbody>
+</table>
+
+**Example** *(complex/convenient options object handling with default options)*  
+```js
+// note: when using 'optionist/process', you also need 'optionist/process/get' too
+const process = require('optionist/process')
+const get = require('optionist/process/get')
+
+function myFunction (options = null) {
+  options = process(options, DEFAULTS) // best practice: use a constant, when storing your defaults
+
+  // handle complex, deeply nested Objects without 'Uncaught ReferenceError'
+  // and constant "key within object" checking
+  // note: key existence checking isn't needed (e.g.:
+  // if (options.settings && 'data' in options.settings && ...) { ... })
+  this._value = get(options.settings.deeply.nested.data.value)
+  // note: per-option default option is also possible, when the specific option doesn't exist
+  this._flag = get(options.settings.burried.deeply.yet.doesnt.exist.flag, true)
+
+  // also possible in conditions...
+  if (get(options.deeply.nested.settings.value) > 0) {
+    // handle value
+  }
+
+  // ...with per-option default option, when the specific option doesn't exist
+  if (get(options.some.other.deeply.nested.non.existent.flag, false)) {
+    // handle flag
+  }
+}
+
+// or with a class
+class MyClass {
+  constructor (options = null) {
+    options = process(options, DEFAULTS) // best practice: use a constant, when storing your defaults
+
+    // handle complex, deeply nested Objects without 'Uncaught ReferenceError'
+    // and constant "key within object" checking
+    // note: key existence checking isn't needed (e.g.:
+    // if (options.settings && 'data' in options.settings && ...) { ... })
+    this._value = get(options.settings.deeply.nested.data.value)
+    // note: per-option default option is also possible, when the specific option doesn't exist
+    this._flag = get(options.settings.burried.deeply.yet.doesnt.exist.flag, true)
+
+    // also possible in conditions...
+    if (get(options.deeply.nested.settings.value) > 0) {
+      // handle value
+    }
+
+    // ...with per-option default option, when the specific option doesn't exist
+    if (!get(options.some.other.deeply.nested.non.existent.flag, false)) {
+      // handle flag
+    }
+  }
+}
+```
 <a name="module_optionist/process/get"></a>
 
 ## optionist/process/get
@@ -311,29 +394,32 @@ Returns the specific option of the processed options from a recursive Proxy.
     </tr>  </tbody>
 </table>
 
-<a name="module_optionist/process"></a>
+**Example** *(get the processed options - for more examples, check: **optionist/process**)*  
+```js
+const process = require('optionist/process')
+const get = require('optionist/process/get')
 
-## optionist/process
-<a name="exp_module_optionist/process--module.exports"></a>
+class MyClass {
+  constructor (options = null) {
+    options = process(options, DEFAULTS)
 
-### module.exports([options], [defaultOptions]) ⇒ <code>Object</code> ⏏
-Processes the options and default options into a new recursive Proxy.
+    // handle complex, deeply nested Objects without 'Uncaught ReferenceError'
+    // and constant "key within object" checking
+    // note: key existence checking isn't needed (e.g.:
+    // if (options.settings && 'data' in options.settings && ...) { ... })
+    this._value = get(options.settings.deeply.nested.data.value)
+    // note: per-option default option is also possible, when the specific option doesn't exist
+    this._flag = get(options.settings.burried.deeply.yet.doesnt.exist.flag, true)
 
-**Kind**: Exported function  
-**Returns**: <code>Object</code> - The new recursive Proxy with the processed options.  
-<table>
-  <thead>
-    <tr>
-      <th>Param</th><th>Type</th><th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-<tr>
-    <td>[options]</td><td><code>Object</code></td><td><p>The options to use to merge into a new recursive Proxy.</p>
-</td>
-    </tr><tr>
-    <td>[defaultOptions]</td><td><code>Object</code></td><td><p>The default options to use to merge into a new recursive Proxy.</p>
-</td>
-    </tr>  </tbody>
-</table>
+    // also possible in conditions...
+    if (get(options.deeply.nested.settings.value) > 0) {
+      // handle value
+    }
 
+    // ...with per-option default option, when the specific option doesn't exist
+    if (!get(options.some.other.deeply.nested.non.existent.flag, false)) {
+      // handle flag
+    }
+  }
+}
+```

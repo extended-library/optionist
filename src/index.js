@@ -8,8 +8,8 @@ const merge = require('./_utils/_merge')
 
 /**
  * Copies and merges options and default options into a new object.
- * If no options and defaultOptions were passed, or they are both null, or falsy,
- * an empty Object will be returned (e.g.: {}).
+ * If no `options` and `defaultOptions` were passed, or they are both `null`, or falsy,
+ * an empty Object will be returned (e.g.: `{}`).
  *
  * @param {Object} [options]        - The options to use to merge into a new object.
  * @param {Object} [defaultOptions] - The default options to use to merge into a new object.
@@ -128,11 +128,12 @@ const merge = require('./_utils/_merge')
  *   options = process(options, DEFAULTS)
  *
  *   // handle complex, deeply nested Objects without 'Uncaught ReferenceError'
- *   // and constant "key within object" checking, e.g.:
- *   // note: key existence checking isn't needed (e.g.: if (options.settings && 'data' in options.settings && ...))
+ *   // and constant "key within object" checking
+ *   // note: key existence checking isn't needed (e.g.:
+ *   // if (options.settings && 'data' in options.settings && ...) { ... })
  *   this._value = get(options.settings.deeply.nested.data.value)
  *   // note: per-option default option is also possible, when the specific option doesn't exist
- *   this._flag = get(options.settings.burried.deeply.flag, true)
+ *   this._flag = get(options.settings.burried.deeply.yet.doesnt.exist.flag, true)
  *
  *   // also possible in conditions...
  *   if (get(options.deeply.nested.settings.value) > 0) {
@@ -140,7 +141,7 @@ const merge = require('./_utils/_merge')
  *   }
  *
  *   // ...with per-option default option, when the specific option doesn't exist
- *   if (get(options.some.other.deeply.nested.flag, false)) {
+ *   if (get(options.some.other.deeply.nested.non.existent.flag, false)) {
  *     // handle flag
  *   }
  * }
