@@ -12,7 +12,15 @@
 [![ISC License][badge-license-isc]][url-license-doc-isc]
 [![PRs Welcome][badge-contrib]][url-contrib-doc]
 
+---
+
 A powerful **options object parser utility**, a.k.a. ***Options Specialist***.
+
+Follow the project on [Twitter][url-twitter] for updates and
+check out the [contribution][url-section-contrib] section 
+if you're looking to contribute *(issues, PRs, ideas, etc.)*.
+
+---
 
 ## Why optionist?
 
@@ -174,6 +182,8 @@ testFunction2({ value: 42 })
   [url-license-doc]:     LICENSE.md
   [url-license-doc-isc]: https://github.com/nodewell/optionist/blob/master/LICENSE.md#isc-license  
   [url-contrib-doc]:     https://github.com/nodewell/optionist/blob/master/.github/CONTRIBUTING.md
+  [url-twitter]:         https://twitter.com/search?q=%23nodewell%20%23optionist&src=github
+  [url-section-contrib]: https://github.com/nodewell/optionist/blob/master/README.md#contribution
   [url-usage-1]:         https://github.com/nodewell/optionist/blob/master/README.md#easy-options-object-parsing
   [url-usage-2]:         https://github.com/nodewell/optionist/blob/master/README.md#a-better-objectassign-alternative
   [url-usage-3]:         https://github.com/nodewell/optionist/blob/master/README.md#get-any-option-without-errors-via-recursive-proxy
