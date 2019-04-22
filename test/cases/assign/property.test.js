@@ -3,7 +3,7 @@
 const assert = require('assert')
 const property = require('../../../src/assign/property')
 
-describe('optionry/assign/property', () => {
+describe('optionist/assign/property', () => {
   it('should throw an error, when called improperly', () => {
     let message
 

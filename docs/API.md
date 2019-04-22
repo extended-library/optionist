@@ -1,26 +1,26 @@
 ## Modules
 
 <dl>
-<dt><a href="#module_optionry">optionry</a></dt>
+<dt><a href="#module_optionist">optionist</a></dt>
 <dd></dd>
-<dt><a href="#module_optionry/assign">optionry/assign</a></dt>
+<dt><a href="#module_optionist/assign">optionist/assign</a></dt>
 <dd></dd>
-<dt><a href="#module_optionry/assign/method">optionry/assign/method</a></dt>
+<dt><a href="#module_optionist/assign/method">optionist/assign/method</a></dt>
 <dd></dd>
-<dt><a href="#module_optionry/assign/property">optionry/assign/property</a></dt>
+<dt><a href="#module_optionist/assign/property">optionist/assign/property</a></dt>
 <dd></dd>
-<dt><a href="#module_optionry/assign/underscore">optionry/assign/underscore</a></dt>
+<dt><a href="#module_optionist/assign/underscore">optionist/assign/underscore</a></dt>
 <dd></dd>
-<dt><a href="#module_optionry/process/get">optionry/process/get</a></dt>
+<dt><a href="#module_optionist/process/get">optionist/process/get</a></dt>
 <dd></dd>
-<dt><a href="#module_optionry/process">optionry/process</a></dt>
+<dt><a href="#module_optionist/process">optionist/process</a></dt>
 <dd></dd>
 </dl>
 
-<a name="module_optionry"></a>
+<a name="module_optionist"></a>
 
-## optionry
-<a name="exp_module_optionry--module.exports"></a>
+## optionist
+<a name="exp_module_optionist--module.exports"></a>
 
 ### module.exports([options], [defaultOptions]) ⇒ <code>Object</code> ⏏
 Copies and merges options and default options into a new object.
@@ -43,13 +43,13 @@ Copies and merges options and default options into a new object.
     </tr>  </tbody>
 </table>
 
-<a name="module_optionry/assign"></a>
+<a name="module_optionist/assign"></a>
 
-## optionry/assign
-<a name="module_optionry/assign/method"></a>
+## optionist/assign
+<a name="module_optionist/assign/method"></a>
 
-## optionry/assign/method
-<a name="exp_module_optionry/assign/method--module.exports"></a>
+## optionist/assign/method
+<a name="exp_module_optionist/assign/method--module.exports"></a>
 
 ### module.exports(class_, [options], [defaultOptions]) ⏏
 Processes the given options and assigns them by calling the setter methods
@@ -79,10 +79,10 @@ Processes the given options and assigns them by calling the setter methods
     </tr>  </tbody>
 </table>
 
-<a name="module_optionry/assign/property"></a>
+<a name="module_optionist/assign/property"></a>
 
-## optionry/assign/property
-<a name="exp_module_optionry/assign/property--module.exports"></a>
+## optionist/assign/property
+<a name="exp_module_optionist/assign/property--module.exports"></a>
 
 ### module.exports(class_, [options], [defaultOptions]) ⏏
 Processes the given options and assigns them by calling the setter properties
@@ -112,10 +112,10 @@ Processes the given options and assigns them by calling the setter properties
     </tr>  </tbody>
 </table>
 
-<a name="module_optionry/assign/underscore"></a>
+<a name="module_optionist/assign/underscore"></a>
 
-## optionry/assign/underscore
-<a name="exp_module_optionry/assign/underscore--module.exports"></a>
+## optionist/assign/underscore
+<a name="exp_module_optionist/assign/underscore--module.exports"></a>
 
 ### module.exports(class_, [options], [defaultOptions]) ⏏
 Processes the given options and assigns them by setting the underscored properties
@@ -145,10 +145,10 @@ Processes the given options and assigns them by setting the underscored properti
     </tr>  </tbody>
 </table>
 
-<a name="module_optionry/process/get"></a>
+<a name="module_optionist/process/get"></a>
 
-## optionry/process/get
-<a name="exp_module_optionry/process/get--module.exports"></a>
+## optionist/process/get
+<a name="exp_module_optionist/process/get--module.exports"></a>
 
 ### module.exports([option], [defaultOption]) ⇒ <code>\*</code> ⏏
 Returns the specific option of the processed options from a recursive Proxy.
@@ -175,10 +175,10 @@ Returns the specific option of the processed options from a recursive Proxy.
     </tr>  </tbody>
 </table>
 
-<a name="module_optionry/process"></a>
+<a name="module_optionist/process"></a>
 
-## optionry/process
-<a name="exp_module_optionry/process--module.exports"></a>
+## optionist/process
+<a name="exp_module_optionist/process--module.exports"></a>
 
 ### module.exports([options], [defaultOptions]) ⇒ <code>Object</code> ⏏
 Processes the options and default options into a new recursive Proxy.

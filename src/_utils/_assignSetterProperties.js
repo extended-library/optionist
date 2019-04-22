@@ -1,7 +1,7 @@
 'use strict'
 
 /**
- * @module optionry/_utils/_assignSetterProperties
+ * @module optionist/_utils/_assignSetterProperties
  */
 
 const getDescriptorMap = require('./_getDescriptorMap')

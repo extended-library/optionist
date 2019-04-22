@@ -1,21 +1,22 @@
 {
-  "name": "optionry",
+  "name": "optionist",
   "version": "0.0.0-development",
-  "description": "A powerful option parser utility, a.k.a. Options Weaponry.",
+  "description": "A powerful option parser utility, a.k.a. Options Specialist.",
   "author": "Richard King <richrdkng@gmail.com> (www.richrdkng.com)",
   "license": "ISC",
-  "homepage": "https://github.com/nodewell/optionry#readme",
+  "homepage": "https://github.com/nodewell/optionist#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nodewell/optionry.git"
+    "url": "https://github.com/nodewell/optionist.git"
   },
   "bugs": {
-    "url": "https://github.com/nodewell/optionry/issues"
+    "url": "https://github.com/nodewell/optionist/issues"
   },
   "main": "index.js",
   "keywords": [
     "option",
     "options",
+    "optionist",
     "opt",
     "opts",
     "parser",
@@ -24,8 +25,12 @@
     "options-parser",
     "option-parsing",
     "options-parsing",
-    "options weaponry",
-    "weaponry",
+    "option specialist",
+    "options specialist",
+    "option-specialist",
+    "options-specialist",
+    "specialist",
+    "merge",
     "utility",
     "util",
     "tool"

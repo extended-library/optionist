@@ -1,7 +1,7 @@
 'use strict'
 
 /**
- * @module optionry/_utils/_getValue
+ * @module optionist/_utils/_getValue
  */
 
 /**

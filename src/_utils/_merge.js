@@ -1,7 +1,7 @@
 'use strict'
 
 /**
- * @module optionry/_utils/_merge
+ * @module optionist/_utils/_merge
  */
 
 /**

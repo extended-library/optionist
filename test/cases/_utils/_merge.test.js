@@ -3,7 +3,7 @@
 const assert = require('assert')
 const _merge = require('../../../src/_utils/_merge')
 
-describe('optionry/_utils/_merge', () => {
+describe('optionist/_utils/_merge', () => {
   it('should return an empty object, when no parameterse were passed', () => {
     assert.deepStrictEqual(_merge(), {})
   })

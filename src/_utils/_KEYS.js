@@ -1,7 +1,7 @@
 'use strict'
 
 /**
- * @module optionry/_utils/_KEYS
+ * @module optionist/_utils/_KEYS
  */
 
 /**

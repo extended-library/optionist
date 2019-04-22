@@ -1,7 +1,7 @@
 'use strict'
 
 /**
- * @module optionry/assign
+ * @module optionist/assign
  */
 
 module.exports = {

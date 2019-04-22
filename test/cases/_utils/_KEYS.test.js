@@ -3,7 +3,7 @@
 const assert = require('assert')
 const _KEYS = require('../../../src/_utils/_KEYS')
 
-describe('optionry/_utils/_KEYS', () => {
+describe('optionist/_utils/_KEYS', () => {
   it('should have 2 properties', () => {
     assert.deepStrictEqual(Object.keys(_KEYS), ['OPTIONS', 'KEY'])
   })

@@ -1,7 +1,7 @@
 'use strict'
 
 /**
- * @module optionry
+ * @module optionist
  */
 
 const merge = require('./_utils/_merge')

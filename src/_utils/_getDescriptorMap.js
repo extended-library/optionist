@@ -1,7 +1,7 @@
 'use strict'
 
 /**
- * @module optionry/_utils/_getDescriptorMap
+ * @module optionist/_utils/_getDescriptorMap
  */
 
 /**

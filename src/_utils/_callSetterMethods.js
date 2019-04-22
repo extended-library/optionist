@@ -1,7 +1,7 @@
 'use strict'
 
 /**
- * @module optionry/_utils/_callSetterMethods
+ * @module optionist/_utils/_callSetterMethods
  */
 
 const getDescriptorMap = require('./_getDescriptorMap')

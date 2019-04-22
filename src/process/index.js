@@ -1,7 +1,7 @@
 'use strict'
 
 /**
- * @module optionry/process
+ * @module optionist/process
  */
 
 const KEYS = require('../_utils/_KEYS')

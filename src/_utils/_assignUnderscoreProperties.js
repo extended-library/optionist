@@ -1,7 +1,7 @@
 'use strict'
 
 /**
- * @module optionry/_utils/_assignUnderscoreProperties
+ * @module optionist/_utils/_assignUnderscoreProperties
  */
 
 /**

@@ -3,7 +3,7 @@
 const assert = require('assert')
 const _getValue = require('../../../src/_utils/_getValue')
 
-describe('optionry/_utils/_getValue', () => {
+describe('optionist/_utils/_getValue', () => {
   it('should return the property, when exists', () => {
     assert.strictEqual(_getValue({ a: 1 }, 'a'), 1)
     assert.strictEqual(_getValue({ a: 1 }, '.a'), 1)

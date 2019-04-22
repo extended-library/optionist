@@ -6,7 +6,7 @@ const get = require('../../../src/process/get')
 
 const DEFAULTS = { a: 1, b: { c: 2 }, d: [3, 4, 5] }
 
-describe('optionry/process/get', () => {
+describe('optionist/process/get', () => {
   it('should throw an error, when unprocessed object was passed', () => {
     let message
 
