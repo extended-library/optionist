@@ -175,7 +175,7 @@ testFunction2({ value: 42 })
   [url-travis]:          https://travis-ci.org/nodewell/optionist
   [url-coverage]:        https://coveralls.io/github/nodewell/optionist?branch=master
   [url-greenkeeper]:     https://greenkeeper.io
-  [url-docs]:            https://inch-ci.org/github/nodewell/optionist
+  [url-docs]:            https://github.com/nodewell/optionist/blob/master/docs/API.md
   [url-style]:           https://standardjs.com
   [url-commit]:          http://commitizen.github.io/cz-cli
   [url-release]:         https://semantic-release.gitbook.io/semantic-release
