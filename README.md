@@ -12,7 +12,13 @@
 [![ISC License][badge-license-isc]][url-license-doc-isc]
 [![PRs Welcome][badge-contrib]][url-contrib-doc]
 
-A powerful **option parser utility**, a.k.a. ***Options Specialist***.
+A powerful **options object parser utility**, a.k.a. ***Options Specialist***.
+
+## Why optionist?
+
+ - Easy [options object](https://www.codereadability.com/what-are-javascript-options-objects/) parsing
+ - A better alternative to [Object.assign](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
+ - Get every possible option without checking for ```key``` existence via recursive [Proxy](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy)
 
 ## Installation
 
@@ -21,6 +27,115 @@ npm install optionist --save
 ```
 
 ## Usage
+
+### Easy ```options``` Object Parsing
+
+```javascript
+const optionist = require('optionist')
+
+// with a dedicated defaults object --------------------------------------------
+const DEFAULTS = { 
+  value: 7, 
+  flag: true, 
+  callback: null
+  /* etc. */
+}
+
+function testFuncion1 (options) {
+  options = optionist(options, DEFAULTS)
+
+  this._value = options.value
+  this._flag = options.flag
+  this._callback = options.callback  
+}
+
+testFunction1({ value: 42 })
+
+// with inline defaults --------------------------------------------------------
+function testFuncion2 (options) {
+  options = optionist(options, { 
+    value: 7, 
+    flag: true, 
+    callback: null
+    /* etc. */
+  })
+
+  this._value = options.value
+  this._flag = options.flag
+  this._callback = options.callback
+}
+
+testFunction2({ value: 42 })
+```
+
+### A Better ```Object.assign``` Alternative
+
+```javascript
+// with underscored properties (e.g.: this._value = 42) ------------------------
+const underscore = require('optionist/assign/underscore')
+
+function testFuncion1 (options) {
+  // the properties will be set automatically based on the options
+  // that are merged with the passed options and with the default options
+  underscore(options, DEFAULTS)  
+  
+  /*
+    the following properties will be set automatically
+    based on the options and default options:
+
+     - this._value
+     - this._flag
+     - this._callback
+  */
+
+  this._value = options.value
+  this._flag = options.flag
+  this._callback = options.callback  
+}
+
+testFunction1({ value: 42 })
+
+
+
+
+const optionist = require('optionist')
+
+// with a dedicated defaults object --------------------------------------------
+const DEFAULTS = { 
+  value: 7, 
+  flag: true, 
+  callback: null
+  /* etc. */
+}
+
+function testFuncion1 (options) {
+  options = optionist(options, DEFAULTS)
+
+  this._value = options.value
+  this._flag = options.flag
+  this._callback = options.callback  
+}
+
+testFunction1({ value: 42 })
+
+// with inline defaults --------------------------------------------------------
+function testFuncion2 (options) {
+  options = optionist(options, { 
+    value: 7, 
+    flag: true, 
+    callback: null
+    /* etc. */
+  })
+
+  this._value = options.value
+  this._flag = options.flag
+  this._callback = options.callback
+}
+
+testFunction2({ value: 42 })
+```
+
+### Get any option without errors via recursive ```Proxy```
 
 ## Contribution
 
