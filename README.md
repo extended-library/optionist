@@ -16,9 +16,10 @@ A powerful **options object parser utility**, a.k.a. ***Options Specialist***.
 
 ## Why optionist?
 
- - Easy [options object](https://www.codereadability.com/what-are-javascript-options-objects/) parsing
- - A better alternative to [Object.assign](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
- - Get every possible option without checking for ```key``` existence via recursive [Proxy](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy)
+ - [**1.:**][url-usage-1] Easy & minimal [options object][url-options-object] parsing
+ - [**2.:**][url-usage-2] A better & more robust alternative to [Object.assign][url-object-assign]
+ - [**3.:**][url-usage-3] Get every possible option **without checking key existences** 
+                          via recursive [Proxy][url-proxy]
 
 ## Installation
 
@@ -173,3 +174,9 @@ testFunction2({ value: 42 })
   [url-license-doc]:     LICENSE.md
   [url-license-doc-isc]: https://github.com/nodewell/optionist/blob/master/LICENSE.md#isc-license  
   [url-contrib-doc]:     https://github.com/nodewell/optionist/blob/master/.github/CONTRIBUTING.md
+  [url-usage-1]:         https://github.com/nodewell/optionist/blob/master/README.md#easy-options-object-parsing
+  [url-usage-2]:         https://github.com/nodewell/optionist/blob/master/README.md#a-better-objectassign-alternative
+  [url-usage-3]:         https://github.com/nodewell/optionist/blob/master/README.md#get-any-option-without-errors-via-recursive-proxy
+  [url-options-object]:  https://www.codereadability.com/what-are-javascript-options-objects
+  [url-object-assign]:   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
+  [url-proxy]:           https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy
